@@ -66,10 +66,20 @@ const deleteGame = async (req, res) => {
     games: req.games,
     updated: req.game
   });
+
+  
 }
+
+const sendUpdatedGames = (req, res) => {
+  res.send({
+    games: req.games,
+    updated: req.updatedObject
+  });
+};
 
 module.exports = {
     sendAllGames,
     deleteGame,
     addGameController,
+    sendUpdatedGames
 }
